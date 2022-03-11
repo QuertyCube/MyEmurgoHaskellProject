@@ -24,7 +24,7 @@ import Prelude hiding (catch)
 main :: IO ()
 main = do
   deleteFileIfExis "log.txt"
-  putStrLn "Enter Velocity (1,2,3,...): "
+  putStrLn "Enter Start Velocity: "
   velInput <- getLine
   putStrLn "Enter Max Velocity: "
   maxVelInput <- getLine
@@ -64,9 +64,6 @@ data Modelnya = Modelnya {posision :: Point, angle :: Point}
 
 randomN :: Int -> Int -> IO Int
 randomN strt end = getStdRandom (randomR (strt, fromIntegral end))
-
-toInt :: Float -> Int
-toInt = round
 
 iteration :: Int -> Int -> Float -> Float -> ViewPort -> Float -> Modelnya -> Modelnya
 iteration a b tambah akhir _ _ Modelnya {posision = (px, py), angle = (vx, vy)} =
