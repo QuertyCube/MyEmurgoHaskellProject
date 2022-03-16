@@ -12,7 +12,7 @@ cabal run
 
 ## Example of input in program
 
-```haskell
+```
 Enter Start Velocity (1,2,...): 
 1
 Enter Max Velocity: 
